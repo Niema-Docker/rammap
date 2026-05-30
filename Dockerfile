@@ -5,7 +5,7 @@ MAINTAINER Niema Moshiri <niemamoshiri@gmail.com>
 # install Minimap2
 RUN apk update && \
     apk add bash && \
-    wget -qO- "https://sh.rustup.rs" | sh && \
+    wget -qO- "https://sh.rustup.rs" | sh -s -- -y && \
     rustup update stable && \
     rustup default stable && \
     wget -qO- "https://github.com/jwanglab/rammap/archive/refs/tags/v1.0.0.tar.gz" | tar -zx && \
